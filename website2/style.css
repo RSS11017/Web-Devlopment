@@ -1,0 +1,50 @@
+body{
+    width: 100%;
+    margin: 0px;
+    z-index: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    width: 100%;
+    height: 100%;
+}
+.PageHead{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(38, 199, 145);
+    border: 3px solid yellow;
+    position: absolute;
+    z-index: 1;
+    color: Red;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.PageMid{
+    width: 100%;
+    height: 70vh;
+}
+.tab1{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(228, 65, 65);
+    border: 2px solid yellow;
+}
+table{
+    transform: translate(35px,300px);
+    color: yellow;
+    font-size: 30px;
+}
+th{
+    width: 200px;
+}
+a:link{
+    color: yellow;
+}
+img{
+    border-radius: 40px;
+    border: 2px solid black;
+}
