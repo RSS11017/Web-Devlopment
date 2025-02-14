@@ -1,0 +1,11 @@
+/* #content-left img{
+    -webkit-mask-image: url(heritage2.png);
+    mask-image: url(heritage2.png);
+    mask-repeat: no-repeat; 
+} */
+#content-left{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

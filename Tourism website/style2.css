@@ -1,0 +1,45 @@
+.box2{
+    height: calc(100vh - 190px);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#box3{
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+#box3 img{
+    display: flex;
+    height: 100%;
+    width: auto;
+}
+#box4{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#box4 h1{
+    font-size: 60px;
+    color: #13384f;
+    text-transform: uppercase;
+}
+#box4 h2{
+    font-size: 30px;
+    color: #FCA70C;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+#box4 p{
+    text-align: center;
+    width: 70%;
+}
+.box2 img:hover{
+    translate: -100px 0;
+    transition: all .5s ease-in;
+}

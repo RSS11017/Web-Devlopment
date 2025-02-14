@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    height: 100%;
+    font-family: "Smooch Sans", serif;
+    font-weight: 600;
+    font-size: 20px;
+    /* background:linear-gradient(223deg,white,rgb(220, 212, 212),rgb(202, 172, 172)); */
+    background-image: url(background.png);
+    opacity: 1;
+    background-size: cover;
+}
+nav{
+    height: 120px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+li{
+    padding: 60px;
+}
+a{
+    text-decoration: none;
+}
+li a::after{
+    content: ' ';
+    display: block;
+    height: 5px;
+    width: 0;
+    background-color: #000000;
+    transition:all .5s;
+}
+li a:hover::after{
+    width: 100%;
+}
+button{
+    width: 90px;
+    height: 40px;
+    margin: 50px;
+    background-color: navy;
+    /* background-image: linear-gradient(to right, #B24592 0%, #F15F79 51%, #B24592 100%); */
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+button:hover {
+    background-position: right center;
+    transform: translateY(-0.20em);
+    box-shadow: 0 10px 9px -3px #615c5c61;
+}
+button:active {
+    transform: translateY(0);
+    box-shadow: unset;
+}
+a:hover{
+    color: blue;
+}
+a:link{
+    color: black;
+}
+#box{
+    width: 100%;
+    height: 30px;
+    background-color: navy;
+}
+.places{
+    width: 100%;
+    height: 600px;
+    border: 2px solid black;
+}
+.places img{
+    width: 200px;
+    height: auto;
+}
+input{
+    width: 300px;
+    height: 35px;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 10px;
+}
+#searchBar{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.cards{
+    width: 300px;
+    height: 200px;
+    border: solid 2px rgb(214, 231, 62);
+    border-radius: 30px;
+    background-color: navy;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    overflow: hidden;
+}
+.cards:hover {
+    background-position: right center;
+    transform: translateY(-0.20em);
+    box-shadow: 0 10px 9px -3px #615c5c61;
+}
+.cards img {
+    width: 50%;
+    object-fit: cover; 
+}
+#taj img{
+    width: 80%;
+}
+#temple2 img{
+    width: 80%;
+}
+.cards:before {
+    content: '';
+    background: linear-gradient(225deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 400%;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: opacity .3s ease-in;
+    border-radius: 12px;
+}
+.cards:hover:before {
+    animation: glowing 20s linear infinite;
+}
+.cards:active:before {
+    background: #000137;
+}
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+.box2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+#box3, #box4{
+    display: flex;
+}
+#box5{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: navy;
+    color: white;
+}
+#t1, #t3{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#t1{
+    margin-left: 50px;
+}
+#t3{
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 60px;
+}
+#t2{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fa-phone{
+    margin: 10px;
+    font-size: 30px;
+}
+.fa-instagram,
+.fa-facebook,
+.fa-square-twitter,
+.fa-discord,
+.fa-check{
+    font-size: 30px;
+}
