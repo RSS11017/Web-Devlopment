@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display</title>
+  <script src="script.js" defer></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .up {
+      width: 100%;
+      height: 16rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .box1 {
+      width: 100%;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    .box2 {
+      width: 100%;
+      height: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .search {
+      width: 16rem;
+      height: 3rem;
+      display: flex;
+    }
+    .search input {
+      width: 13rem;
+      height: 3rem;
+      border: 1px solid red;
+      padding-left: 10px;
+    }
+    .search input::placeholder {
+      text-align: center;
+      font-size: 16px;
+    }
+    .search button {
+      width: 3rem;
+      height: 3rem;
+      background-color: orange;
+      color: white;
+    }
+    .search button:hover {
+      transform: scale(1.1);
+      background-color: navy;
+    }
+    .box2 button {
+      width: 6rem;
+      height: 3rem;
+      background-color: green;
+      color: white;
+      padding-left: 10px;
+    }
+    .box2 button:hover {
+      transform: scale(1.1);
+      background-color: navy;
+    }
+    .down {
+      width: 100%;
+      height: 20rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-container {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+    .card {
+      min-width: 200px;
+      height: 100%;
+      background-color: navy;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      z-index: 10;
+      font-size: 2rem;
+    }
+    .arrow.left {
+      left: 0.5rem;
+    }
+    .arrow.right {
+      right: 0.5rem;
+    }
+    .top {
+      height: 3rem;
+      width: 100%;
+      color: navy;
+      font-weight: 600;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="up">
+    <div class="box1">
+      <div class="search">
+        <input type="text" placeholder="Search Movie Name...">
+        <button id="goBtn">Go</button>
+      </div>
+    </div>
+    <div class="box2">
+      <button id="addBtn">Add</button>
+      <button id="clear">Clear</button>
+    </div>
+  </div>
+  <div class="down">
+    <div class="top">
+      <u>
+        <h1>Movie Lists</h1>
+      </u>
+    </div>
+    <button class="arrow left" onclick="scrollLeft()">&larr;</button>
+    <div class="card-container" id="cardContainer">
+      <div class="card">
+        <img src="images/image1.png" alt="Movie 1">
+      </div>
+      <div class="card">
+        <img src="images/image2.png" alt="Movie 2">
+      </div>
+      <div class="card">
+        <img src="images/image3.jpg" alt="Movie 3">
+      </div>
+      <div class="card">
+        <img src="images/image4.png" alt="Movie 4">
+      </div>
+      <div class="card">
+        <img src="images/image5.png" alt="Movie 4">
+      </div>
+      <div class="card">
+        <img src="images/image6.png" alt="Movie 4">
+      </div>
+      <div class="card">
+        <img src="images/image7.png" alt="Movie 4">
+      </div>
+      <div class="card">
+        <img src="images/image8.png" alt="Movie 4">
+      </div>
+      <div class="card">
+        <img src="images/image9.png" alt="Movie 4">
+      </div>
+      <div class="card">
+        <img src="images/image10.png" alt="Movie 4">
+      </div>
+      <div class="card">
+        <img src="images/image3.png" alt="Movie 4">
+      </div>
+      <div class="card">
+        <img src="images/image5.png" alt="Movie 4">
+      </div>
+    </div>
+    <button class="arrow right" onclick="scrollRight()">&rarr;</button>
+  </div>
+</body>
+<script>
+  const cardContainer = document.getElementById('cardContainer');
+
+  function scrollLeft() {
+    cardContainer.scrollBy({ left: -220, behavior: 'smooth' });
+  }
+
+  function scrollRight() {
+    cardContainer.scrollBy({ left: 220, behavior: 'smooth' });
+  }
+</script>
+</html>
